@@ -1,0 +1,579 @@
+/*
+Theme Name: Educared2019
+Theme URI: https://wordpress.org/themes/twentyseventeen/
+Author: Fernando Paredes Rios
+Author URI: https://wordpress.org/
+Description: Nueva Web de Educared
+Version: 1.0
+Text Domain: educared2019
+Tags: page, educared
+*/
+
+@font-face {
+   font-family: 'icomoon';
+   src:  url('../fonts/icomoon.eot?wm58se');
+   src:  url('../fonts/') format('embedded-opentype'),
+     url('../fonts/icomoon.ttf?wm58se') format('truetype'),
+     url('../fonts/icomoon.woff?wm58se') format('woff'),
+     url('../fonts/icomoon.svg?wm58se#icomoon') format('svg');
+   font-weight: normal;
+   font-style: normal;
+   font-display: block;
+ }
+ 
+ [class^="icon-"], [class*=" icon-"] {
+   /* use !important to prevent issues with browser extensions that change fonts */
+   font-family: 'icomoon' !important;
+   /* speak: none; */
+   font-style: normal;
+   font-weight: normal;
+   font-variant: normal;
+   text-transform: none;
+   line-height: 1;
+   font-size: 30px !important;
+   padding: 10px !important;
+   
+ 
+   /* Better Font Rendering =========== */
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+ 
+ .icon-home:before {
+   content: "\e900";
+ }
+
+.floatText{
+    background-color: #222222;
+    opacity: 0.5;
+    display: block; 
+    position: absolute;          
+    bottom: -16px; left: 0; 
+    width: 100%; 
+    text-align: center; 
+    padding:  25px 0;
+    color: white;
+ }
+.hamburguesa{
+   display: none;
+}
+/* .navegador{
+    text-align: center;
+    background-color: #1E3245;
+} */
+/* /* .menu{
+   background-color: #1E3245;
+   position: sticky;
+   height: 50px;
+}
+.menu ul{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   width: 100%;
+   
+   
+} */
+/*.menu ul li{
+   text-decoration: none;
+   list-style: none;
+   color: white;
+   width: 100%; */
+   /* padding-top: 10px; */
+   /* padding-bottom: 10px; */
+   /* text-align: center; */
+   /* height: 50px; */
+   /* display: flex;
+   align-items: center;
+   justify-content: center;
+   
+} */
+/* .menu ul li:hover{
+   border: 2px red solid;
+} */
+
+/* .navegador nav div a{ */
+    /* width: 150px; */
+    /* width: 14em;
+    background-color: #1E3245;
+}
+.menu > li > a{
+   position: relative;
+	display: inline-block;
+} */
+/* .dropdownmenu{
+   display: flex;
+   justify-content: space-around;
+   list-style: none;
+   width: 100%;
+   padding-left: 0;
+}
+.dropdownmenu li{
+   width: 100%;
+   height: 40px;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.dropdownmenu li:hover{
+   background-color: white;
+   color: black;
+}
+
+li:hover ul.sub-menu {
+	opacity: 1;
+   visibility: visible;
+   display: block;
+}
+
+.sub-menu {
+	opacity: 0;
+	position: absolute;
+	visibility: hidden;
+   z-index: 2;
+   display: block;
+   width: 14.5%;
+   margin-top: 60px;
+   background-color: #1E3245;
+   padding: 0;
+   text-align: center;
+}
+
+.sub-menu li {
+	float: none;
+	width: 100%;
+}
+.sub-menu li:hover{
+   background: white;
+   color: black;
+}
+
+.sub-menu a:hover {
+   background: #ffffff;
+   color: black;
+}
+.sub-menu a{
+   z-index: 1;
+   width: 100%;
+   color: white;
+   padding: 0;
+} 
+
+li:hover ul.sub-menu li ul.sub-menu{
+   left: 24.5em;
+   opacity: 1;
+	position: absolute;
+	/* visibility: hidden; */
+   /*z-index: 2;
+   display: block;
+   width: 100%;
+   margin-top: 20px;
+   background-color: #1E3245;
+}
+
+.sub-menu li ul{
+   left: 24.5em;
+   opacity: 0;
+	position: absolute;
+	visibility: hidden;
+   z-index: 2;
+   display: block;
+   width: 100%;
+   margin-top: 20px;
+   background-color: #1E3245;
+}  */
+
+.dropdownmenu{
+   height: 50px;
+   box-shadow: 2px 2px 0 #1E3245;
+   display: flex;
+   justify-content: space-around;
+   padding: 0;
+   text-align: center;
+   margin-bottom: 0;
+}
+
+ .dropdownmenu ul, .dropdownmenu li {
+    display: inline;
+} 
+
+.dropdownmenu ul li:hover{
+   border: 2px solid white;
+   
+}
+
+.dropdownmenu ul{
+  padding: 0;
+  
+}
+
+.dropdownmenu li{
+   width: 100%;
+   height: 100%;
+}
+
+.dropdownmenu li:hover ul.sub-menu li{
+   display: block;
+   width: 100%;
+   line-height: 0;
+   border-bottom: 2px solid white;
+   border-left: 2px solid white ;
+   background-color: #1E3245;
+   z-index: 2;
+}
+
+.dropdownmenu ul li{
+   width: 18em;
+   text-align: center;
+}
+
+.dropdownmenu a{
+   padding: 0 20px 0 20px;
+   text-decoration: none;
+   line-height: 50px;
+   display: block;
+   color: #fff;
+   font-family: sans-serif;
+   background-color: #1E3245;
+   width: 100%;
+}
+
+.dropdownmenu a:hover{
+   background: #fff;
+   color: black;
+}
+
+.dropdownmenu ul ul a{
+   width: 100%;
+   line-height: 30px;
+   /* padding: 0 20px; */
+   display: block;
+}
+
+.dropdownmenu ul li{
+   position: relative;
+   float: left;
+}
+
+.dropdownmenu ul ul{
+   position: absolute;
+   top: -9999999px;
+   left: 100%;
+   opacity: 0;
+   background: #1E3245;
+   text-align: left;
+   box-shadow: 2px 2px 0 #1E3245;
+   z-index: 2;
+   width: 150%;
+   
+}
+
+.dropdownmenu ul li{
+   width: 100%;
+   line-height: 0;
+   border-bottom: 2px solid white;
+   border-left: 2px solid white ;
+   background-color: #1E3245;
+   display: none;
+}
+
+.dropdownmenu ul li:hover > ul{
+   position: absolute;
+   top: 100%;
+   opacity: 1;
+   
+}
+
+
+
+ h2{
+     color: #36B9C9;
+ }
+
+ .arriba{
+    background-color: #36B9C9;
+ }
+
+ .imgBanner1{
+     padding:60px;
+     width: 100%;
+     text-align: left;
+ }
+
+ .imgBanner2{
+    padding-top: 50px;
+    width: 100%;
+    text-align: right;
+ }
+
+ .imgBanner2 img{
+   text-align: right;
+ }
+ #navbar{
+   background-color: #1E3245;
+   color: white;
+   z-index: 2;
+   width: 100%;
+}
+
+ .menu{
+    font-size: 11px;
+ }
+
+ .burguer-menu{
+    display: none;
+ }
+
+ .bienvenida{
+     margin: 70px 0;
+ }
+
+ .comunidad{
+    margin: 40px 0;
+ }
+
+ .divcomun{
+    margin: 10px;
+    background-color: #1E3245;
+    color: white;
+ }
+ .divcomun p{
+    padding: 20px;
+ }
+
+ .divcomun h6{
+    padding: 0 20px;
+    margin: 10px 0 0;
+ }
+
+ .input{
+   border-radius: 25px;
+ }
+
+
+ .proyectos{
+     margin: 40px 0;
+ }
+
+ .bloque1{
+    margin: 20px 0;
+    /* border: 1px solid black; */
+    background-color: #36B9C9;
+    color: white;
+    font-size: 12px;
+ }
+
+ .proyimg{
+     padding: 0;
+     margin: 0;
+ }
+
+ .aside{
+    margin: 70px 0;
+ }
+
+ .asImg{
+    padding: 0;
+ }
+ .bloque2{
+    margin:10px 0;
+ }
+
+ .formulario{
+    background-color: #1E3245;
+ }
+
+ .formulario{
+     padding: 0;
+ }
+ .formulario form{
+    padding: 40px 20px;
+    text-align: center;
+    /* font-size: 12px; */
+ }
+ form ::placeholder{
+    font-size: 13px;
+    text-align: center;
+ }
+
+ .parrafo{
+    color: white;
+    font-size: 10px;
+    padding-top: 20px; 
+ }
+
+ .boton{
+     background-color: #36B9C9;
+     color: white;
+     width: 70%;
+     border-radius: 15px;
+     margin-top: 25px;
+ }
+
+ .footer{
+    background-color: #1E3245;
+ }
+
+ .footerR{
+   background-color: #1E3245;
+   display: none;
+ }
+
+ .fund{
+    color: white;
+    padding-top: 40px;
+    font-size: 12px;
+    /* padding-left: 80px; */
+ }
+
+ .who{
+    color: #36B9C9;
+    padding-top: 40px;
+    font-size: 12px;
+ }
+
+ .fotimg{
+   width: 70%;
+   padding: 20px;
+   float: right;
+ }
+
+ 
+
+
+ /* Responsive */
+
+ /* Extra small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 320px) { 
+   
+
+   .burguer-menu{
+      width: 40px;
+      height: 40px;
+      background-color: red;
+      display: block;
+   }
+   .navegador{
+      display: none;
+   }
+   .footer{
+      display: none;
+   }
+   .footerR{
+      display: flex;
+   }
+   .fund{
+      font-size: 12px;  
+      padding: 10px;
+   }
+   .who{
+      font-size: 12px;
+      padding: 10px;
+   }
+   
+}
+@media (max-width: 576px) { 
+   .burguer-menu{
+      width: 40px;
+      height: 40px;
+      background-color: red;
+      display: block;
+   }
+   .dropdownmenu{
+      display: none;
+   }
+   .footer{
+      display: none;
+   }
+   .footerR{
+      display: flex;
+   }
+   .fotimg{
+      display: none;
+   }
+   .fund{
+      font-size: 12px;  
+      padding: 10px;
+   }
+   .who{
+      font-size: 12px;
+      padding: 10px;
+   }
+   
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+   .burguer-menu{
+      width: 40px;
+      height: 40px;
+      background-color: red;
+      display: block;
+      z-index: 1;
+   }
+   .arriba{
+      padding-bottom: 50px;
+   }
+   .dropdownmenu{
+      display: none;
+   }
+   .hamburguesa{
+      display: flex;
+      /* border: 1px solid red; */
+      text-align: center;
+      background-color: #1E3245;
+      color: white;
+      /* position: fixed; */
+      width: 100%;
+      z-index: 3;
+      
+   }
+   .imgBanner1{
+      padding:0;
+      width: 100%;
+  }
+  .imgBanner1 img{
+     width: 100%;
+     padding-top: 10px;
+  }
+   .imgBanner2{
+      padding: 0;
+   }
+   .imgBanner2 img{
+      padding-top: 18px;
+   /* .bienvenida{
+      padding-top: 30px;
+  } */}
+   .footer{
+      display: none;
+   }
+   .footerR{
+      display: flex;
+   }
+   .fotimg{
+      display: none;
+   }
+   .fund{
+      font-size: 12px;  
+      padding: 10px;
+   }
+   .who{
+      font-size: 12px;
+      padding: 10px;
+   }
+}
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { 
+   
+} */
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) { 
+  
+} */
+ 
